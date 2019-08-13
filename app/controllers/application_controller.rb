@@ -18,6 +18,10 @@ class ApplicationController < Sinatra::Base
 
   post "/signup" do
     erb :signup
+    if !!params['username'] || params['password']
+      erb :login
+    else
+      erb :failure
 
   end
 
