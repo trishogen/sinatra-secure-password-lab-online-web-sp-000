@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
     if !!params['username'] || params['password']
       erb :login
     else
-      erb :failure
+      redirect tp '/failure'
     end
   end
 
